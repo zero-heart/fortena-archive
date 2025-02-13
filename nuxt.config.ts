@@ -5,4 +5,18 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt', // Pinia 모듈 추가
   ],
+  css: ['@vuepic/vue-datepicker/dist/main.css', '@/assets/styles/main.scss'],
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      ],
+    },
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
 });

@@ -1,0 +1,93 @@
+@use './base/font';
+@use './base/variables' as *;
+@use './base/reset';
+@use './base/icon';
+
+:root {
+  font-size: 16px;
+
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --gray-color: #{$gray-color};
+  --font-stack: #{$font-stack};
+  --doc-bg-color: #{$doc-bg-color};
+  --header-height: #{$header-height};
+
+  --dp-font-family: #{$font-stack};
+  --dp-font-size: 13px;
+  --dp-cell-size: 28px;
+  --dp-cell-padding: 4px;
+  --dp-input-padding: 4px 24px 4px 8px;
+  --dp-row-margin: 0;
+}
+
+.dp__theme_dark {
+  --dp-background-color: #{$primary-color};
+  --dp-primary-color: #{$secondary-color};
+  --dp-primary-disabled-color: #{$gray-color};
+  --dp-primary-text-color: #{$primary-color};
+  --dp-border-color: #{$gray-color};
+}
+.dp__input {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.dp__input_icons {
+  padding: 6px 8px;
+}
+.dp__calendar_header {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.dp__calendar_header_separator {
+  display: none;
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: var(--doc-bg-color);
+  color: var(--primary-color);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+main {
+  padding: 40px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 30px 40px;
+  color: #fff;
+}
+
+.-input {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0 8px;
+
+  input[type='text'] {
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+}
+
+// .dp__input {
+//   font-size: 14px;
+// }
+// .dp__menu {
+//   font-size: 12px;
+// }
+// .dp__cell_inner {
+//   width: 24px;
+//   height: 24px;
+//   padding: 0;
+// }

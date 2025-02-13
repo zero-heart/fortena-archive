@@ -1,0 +1,127 @@
+body,
+div,
+header,
+nav,
+main,
+footer,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  color: #111;
+  font-family: var(--font-stack);
+}
+fieldset,
+img {
+  border: 0 none;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+input,
+select,
+textarea,
+button,
+img {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+button:not(:disabled),
+*[role='link'],
+*[role='button'] {
+  cursor: pointer;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='password']::-webkit-credentials-auto-fill-button,
+input[type='password']::-webkit-reveal-password-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+input[type='password']::-moz-reveal-password-button {
+  display: none;
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+textarea {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+address,
+em {
+  font-style: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+i {
+  font-style: normal;
+}
+button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 00);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}

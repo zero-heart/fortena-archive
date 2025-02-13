@@ -1,0 +1,24 @@
+@use './variables' as *;
+@use '../helpers/mixins' as *;
+
+.-icon {
+  $size: 24px;
+
+  display: inline-block;
+  width: $size;
+  height: $size;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+
+  &--search {
+    @include icon-mask($icon-search);
+  }
+
+  &--arrow {
+    @include icon-mask($icon-arrow);
+  }
+}
