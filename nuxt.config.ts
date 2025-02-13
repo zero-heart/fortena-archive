@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   ],
   css: ['@vuepic/vue-datepicker/dist/main.css', '@/assets/styles/main.scss'],
   app: {
+    baseURL: '/fortena-archive/', // baseURL 설정
     head: {
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -16,7 +17,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml'],
+      routes: ['/'],
     },
   },
 });
