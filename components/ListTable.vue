@@ -62,7 +62,8 @@ const onSearch = (search) => {
   filteredData.value = store.data.filter((item) =>
     filter === 'songTitle'
       ? item.songTitle?.toLowerCase().includes(keyword.toLowerCase()) ||
-        item.songTitleKR?.toLowerCase().includes(keyword.toLowerCase())
+        item.songTitleKR?.toLowerCase().includes(keyword.toLowerCase()) ||
+        item.songTitleKeyword?.toLowerCase().includes(keyword.toLowerCase())
       : (!keyword || item[filter]?.toLowerCase().includes(keyword.toLowerCase())) &&
         (isEncore ? (isEncore === 'is' ? item.isEncore : !item.isEncore) : true) &&
         (!member || item.singers.includes(member)) &&
