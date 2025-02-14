@@ -5,12 +5,9 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "sitemap": "node scripts/generate-sitemap.js",
-    "prepare-gh-pages": "rm -rf dist && cp -r .output/public dist && touch dist/.nojekyll",
-    "deploy": "npm run generate && npm run prepare-gh-pages && npx gh-pages -d dist --dotfiles"
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.9.0",
@@ -22,7 +19,6 @@
     "vue3-apexcharts": "^1.8.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
     "sass": "^1.84.0"
   }
 }
