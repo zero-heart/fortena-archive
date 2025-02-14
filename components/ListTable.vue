@@ -59,12 +59,14 @@ const filteredData = ref(store.data);
 const onSearch = (search) => {
   console.log(search);
   const { filter, keyword, isEncore, member, date } = search;
-  filteredData.value = store.data.filter(
-    (item) =>
-      item[filter]?.toLowerCase().includes(keyword.toLowerCase()) &&
-      (isEncore ? (isEncore === 'is' ? item.isEncore : !item.isEncore) : true) &&
-      item.singers.includes(member) &&
-      (!date || DateUtils.isDateInRange(item.date, date))
+  filteredData.value = store.data.filter((item) =>
+    filter === 'songTitle'
+      ? item.songTitle?.toLowerCase().includes(keyword.toLowerCase()) ||
+        item.songTitleKR?.toLowerCase().includes(keyword.toLowerCase())
+      : (!keyword || item[filter]?.toLowerCase().includes(keyword.toLowerCase())) &&
+        (isEncore ? (isEncore === 'is' ? item.isEncore : !item.isEncore) : true) &&
+        (!member || item.singers.includes(member)) &&
+        (!date || DateUtils.isDateInRange(item.date, date))
   );
 };
 const onCollapse = (item) => {
@@ -78,6 +80,10 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 @use '~/assets/styles/base/variables' as *;
+
+.table-container {
+  padding: 40px var(--page-padding) 60px;
+}
 
 .table {
   width: 100%;
@@ -107,16 +113,6 @@ onBeforeUnmount(() => {
   padding: 4px 8px;
   text-align: center;
 
-  &:not(:first-child) {
-    border-left: 1px solid #ddd;
-  }
-
-  .thead & {
-    background-color: #f2f2f2;
-    font-weight: 600;
-    padding: 8px;
-  }
-
   &.index {
     flex: 0 0 50px;
   }
@@ -129,10 +125,20 @@ onBeforeUnmount(() => {
   &.singers {
     flex: 0 0 260px;
   }
+
+  &:not(:first-child) {
+    border-left: 1px solid #ddd;
+  }
+
+  .thead & {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    padding: 8px;
+  }
 }
 
 .total {
-  margin-top: 20px;
+  margin: 20px 0 10px;
   font-size: 14px;
   text-align: right;
 

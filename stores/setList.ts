@@ -39,7 +39,7 @@ export const useSetListStore = defineStore('setList', {
             concertName: item.CONCERT_NAME,
             city: item.CITY,
             hall: item.PERFOMANCE_HALL,
-            sontTitleKR: item.SONG_TITLE_KR,
+            songTitleKR: item.SONG_TITLE_KR,
             author: item.AUTHOR,
             workTitle: item.WORK_TITLE,
             type: item.TYPE,

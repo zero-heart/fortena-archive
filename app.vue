@@ -12,8 +12,8 @@ import Header from '~/components/Header.vue';
 
 const title = '포르테나 연주곡 아카이브-Forténa Archive';
 const description =
-  '포르테나는 클래식과 크로스오버 음악을 선보이는 남성 4중창 그룹입니다. 포르테나 아카이브는 팬들의 열정으로 만들어졌고, 누구나 자유롭게 이용할 수 있어요.';
-const host = 'https://fortena.info';
+  '클래식과 크로스오버 음악을 선보이는 네 명의 테너 그룹 포르테나의 모든 연주곡을 제공합니다. 포르테나의 음악이 담긴 시간의 기록, 당신을 감동시킨 그 순간을 다시 만날 수 있습니다. ';
+const host = 'https://www.fortena.info';
 
 useHead({
   title,

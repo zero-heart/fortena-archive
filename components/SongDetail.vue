@@ -15,7 +15,7 @@
       </dd>
       <dd>
         <span class="label">공연일</span>
-        <span class="value">{{ DateUtils.getFormattedDateString(item.date) }}</span>
+        <span class="value">{{ DateUtils.getFormattedDateString(item.date, '.', false) }}</span>
       </dd>
       <dd>
         <span class="label">연주자</span>

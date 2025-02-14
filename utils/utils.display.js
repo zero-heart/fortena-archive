@@ -1,5 +1,5 @@
-export function displaySongTitle({ songTitle, sontTitleKR }) {
-  return sontTitleKR ? `${songTitle} (${sontTitleKR})` : songTitle;
+export function displaySongTitle({ songTitle, songTitleKR }) {
+  return songTitleKR ? `${songTitle} (${songTitleKR})` : songTitle;
 }
 
 export function displayAuthor({ author, type, workTitle }) {

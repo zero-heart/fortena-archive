@@ -24,13 +24,9 @@
 @use '../assets/styles/helpers/mixins' as *;
 
 header {
-  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  color: #fff;
-  background-color: var(--primary-color);
 }
 
 nav {
